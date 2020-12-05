@@ -14,6 +14,11 @@ import './permission'
 import '@/styles/common.css'
 import '@/styles/animate.css'
 
+if (process.env.NODE_ENV === 'development') {
+  const { mockXHR } = require('../mock').default
+  mockXHR()
+}
+
 const i18n = new VueI18n({
   locale: window.localStorage.getItem('language') || 'zh_CN',
   messages: {

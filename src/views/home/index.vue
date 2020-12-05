@@ -75,6 +75,8 @@
 </template>
 
 <script>
+import { getAd } from '@/api/ad'
+
 export default {
   name: 'Home',
   data () {
@@ -168,6 +170,15 @@ export default {
         }
       ]
     }
+  },
+  created () {
+    getAd({
+      page: 1
+    }).then(response => {
+      console.log('response ==> ', response)
+    }).catch(error => {
+      console.log(error)
+    })
   }
 }
 </script>

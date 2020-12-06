@@ -4,7 +4,7 @@
       <el-carousel-item
         v-for="(item, index) in advList"
         :key="index">
-        <img :src="item.imgsrc" alt="" />
+        <img :src="item.imgurl" alt="" />
       </el-carousel-item>
     </el-carousel>
 
@@ -62,10 +62,10 @@
             <img :src="item.imgsrc" alt="" />
             <div class="exp">
               <h3>{{item.tags}}|{{item.title}}</h3>
-              <ul>
-                <li>{{item.source}}</li>
-                <li>{{item.date}}</li>
-              </ul>
+              <dl>
+                <dd>{{item.source}}</dd>
+                <dd>{{item.date}}</dd>
+              </dl>
             </div>
           </router-link>
         </dd>
@@ -75,110 +75,33 @@
 </template>
 
 <script>
-import { getAd } from '@/api/ad'
+import { getHomeData } from '@/api/home'
 
 export default {
   name: 'Home',
   data () {
     return {
-      advList: [
-        {
-          imgsrc: require('@/assets/home/a1.png'),
-          url: ''
-        },
-        {
-          imgsrc: require('@/assets/home/a2.png'),
-          url: ''
-        },
-        {
-          imgsrc: require('@/assets/home/a3.png'),
-          url: ''
-        }
-      ],
-      magicList: [
-        {
-          icon: require('@/assets/home/b1.png'),
-          title: '整租',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/b1.png'),
-          title: '合租',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/b1.png'),
-          title: '地图找房',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/b1.png'),
-          title: '发布房源',
-          url: ''
-        }
-      ],
-      groupList: [
-        {
-          icon: require('@/assets/home/c1.png'),
-          title: '家住回龙观',
-          desc: '归属的感觉',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/c2.png'),
-          title: '宜居四五环',
-          desc: '大都市生活',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/c3.png'),
-          title: '喧嚣三里屯',
-          desc: '繁华的背后',
-          url: ''
-        },
-        {
-          icon: require('@/assets/home/c4.png'),
-          title: '比邻十号线',
-          desc: '地铁心连心',
-          url: ''
-        }
-      ],
-      newsList: [
-        {
-          id: 1001,
-          imgsrc: require('@/assets/house/a1.png'),
-          title: '安贞西里 三室一厅 河间的古雅别院',
-          tags: '置业选择',
-          source: '新华网',
-          date: '2020-06-04'
-        },
-        {
-          id: 1001,
-          imgsrc: require('@/assets/house/a2.png'),
-          title: '大理王宫 苍山洱海间的古雅别院',
-          tags: '置业选择',
-          source: '腾讯网',
-          date: '2020-06-03'
-        },
-        {
-          id: 1001,
-          imgsrc: require('@/assets/house/a3.png'),
-          title: '安居小屋 花园洋房 清新别野',
-          tags: '置业选择',
-          source: '安居网',
-          date: '2020-06-01'
-        }
-      ]
+      advList: [],
+      magicList: [],
+      groupList: [],
+      newsList: []
     }
   },
   created () {
-    getAd({
-      page: 1
-    }).then(response => {
-      console.log('response ==> ', response)
-    }).catch(error => {
-      console.log(error)
-    })
+    this.getData()
+  },
+  methods: {
+    getData () {
+      getHomeData({}).then(response => {
+        const { advList, groupList, magicList, newsList } = response.data
+        this.advList = advList
+        this.groupList = groupList
+        this.magicList = magicList
+        this.newsList = newsList
+      }).catch(error => {
+        console.log(error)
+      })
+    }
   }
 }
 </script>
@@ -324,9 +247,12 @@ export default {
         line-height: 25px;
         color: #333333;
       }
-      p {
+      dd {
         line-height: 20px;
         color: #999999;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1em 0 0;
       }
     }
   }

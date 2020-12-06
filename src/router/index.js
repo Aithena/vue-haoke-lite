@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Router Modules
+import homeRouter from './modules/home'
+import houseRouter from './modules/house'
+import userRouter from './modules/user'
 
 Vue.use(Router)
 
@@ -12,12 +15,9 @@ export const BASIC_ROUTES = [
     redirect: '/home',
     hidden: true
   },
-  {
-    path: '/home',
-    name: 'home',
-    component: () => import('@/views/home/index'),
-    hidden: true
-  },
+  homeRouter,
+  houseRouter,
+  userRouter,
   {
     path: '/register',
     name: 'register',
@@ -45,12 +45,6 @@ export const BASIC_ROUTES = [
 ]
 
 export const ASYNC_ROUTES = [
-  // {
-  //   path: '/user',
-  //   name: 'user',
-  //   component: () => import('@/views/user/home'),
-  //   hidden: true
-  // },
   {
     noAuth: true,
     path: '*',

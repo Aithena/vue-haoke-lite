@@ -1,8 +1,8 @@
 import request from '@/utils/request'
 
-export function getAd (data) {
+export function getHomeData (data) {
   return request({
-    url: '/ad/list',
+    url: '/home/data',
     method: 'get',
     params: data
   })

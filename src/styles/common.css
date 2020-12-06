@@ -11,7 +11,7 @@ html {
 }
 body {
   height: 100%;
-  font: 14px/2 'Microsoft Yahei', Arial;
+  font: 14px/1 'Microsoft Yahei', Arial;
   color: #666;
   background: #fff;
 }
@@ -32,7 +32,7 @@ select,
 button {
   font-family: 'Microsoft Yahei', Arial;
   font-size: inherit;
-  line-height: 2;
+  line-height: 1;
   color: #666;
   outline: 0;
 }
@@ -95,4 +95,12 @@ a {
 }
 .el-card .el-card__header .thead h2 {
   font-weight: normal;
+}
+.loader {
+  position: relative;
+  text-align: center;
+  line-height: 1rem;
+}
+.loader span {
+  color: #999999;
 }

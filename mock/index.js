@@ -1,9 +1,11 @@
 import { XHR, mock } from 'mockjs'
 import { param2Obj } from './utils'
-import ad from './ad'
+import home from './home'
+import house from './house'
 
 const mocks = [
-  ...ad
+  ...home,
+  ...house
 ]
 
 // for front mock

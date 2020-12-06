@@ -2,7 +2,6 @@
   <div class="error-page">
     <div class="inner">
       <div class="text">
-        <img src="@/assets/logo.png" alt="" />
         <h3><b>500</b>. That’s an error.</h3>
         <p>The requested url was not found on this server. That’s all we know.</p>
       </div>

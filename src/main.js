@@ -14,7 +14,7 @@ import './permission'
 import '@/styles/common.css'
 import '@/styles/animate.css'
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock').default
   mockXHR()
 }

@@ -18,6 +18,7 @@ const WHITE_LIST = [
   '/login',
   '/home',
   '/house',
+  '/house/detail',
   '/user'
 ]
 

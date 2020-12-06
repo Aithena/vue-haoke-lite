@@ -16,22 +16,28 @@
             class="link"
             :to="'/house/detail?id=' + item.id">
             <div class="img">
-              <img src="https://api-haoke-web.itheima.net/newImg/7bkc6meof.jpg" alt="">
+              <img
+                :src="item.imgurl"
+                :alt="item.title" />
             </div>
             <div class="exp">
-              <h3 class="title">的框架爱神的箭ad就爱看</h3>
+              <h3 class="title">{{item.title}}</h3>
               <dl class="def">
-                <dd>四室</dd>
-                <dd>89</dd>
-                <dd>南</dd>
-                <dd>国联大厦</dd>
+                <dd
+                  v-for="(item2, index2) in item.def"
+                  :key="index2">
+                  <span>{{item2}}</span>
+                </dd>
               </dl>
               <dl class="tag">
-                <dd>公寓</dd>
-                <dd>限女生</dd>
+                <dd
+                  v-for="(item2, index2) in item.tag"
+                  :key="index2">
+                  <span>{{item2}}</span>
+                </dd>
               </dl>
               <dl class="fee">
-                <dt>1200</dt>
+                <dt>{{item.fee}}</dt>
                 <dd>元/月</dd>
               </dl>
             </div>

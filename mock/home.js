@@ -73,7 +73,7 @@ module.exports = [
           ],
           newsList: [
             {
-              id: 1001,
+              id: 1,
               imgsrc: require('@/assets/house/a1.png'),
               title: '安贞西里 三室一厅 河间的古雅别院',
               tags: '置业选择',
@@ -81,7 +81,7 @@ module.exports = [
               date: '2020-06-04'
             },
             {
-              id: 1001,
+              id: 2,
               imgsrc: require('@/assets/house/a2.png'),
               title: '大理王宫 苍山洱海间的古雅别院',
               tags: '置业选择',
@@ -89,7 +89,7 @@ module.exports = [
               date: '2020-06-03'
             },
             {
-              id: 1001,
+              id: 3,
               imgsrc: require('@/assets/house/a3.png'),
               title: '安居小屋 花园洋房 清新别野',
               tags: '置业选择',

@@ -16,6 +16,13 @@ export default {
       meta: {
         title: 'house'
       }
+    },
+    {
+      path: '/house/detail',
+      component: () => import(/* webpackChunkName: "house" */ '@/views/house/detail.vue'),
+      meta: {
+        title: 'houseDetail'
+      }
     }
   ]
 }

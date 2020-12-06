@@ -7,3 +7,11 @@ export function getHouseList (data) {
     params: data
   })
 }
+
+export function getHouseDetail (data) {
+  return request({
+    url: '/house/detail',
+    method: 'get',
+    params: data
+  })
+}

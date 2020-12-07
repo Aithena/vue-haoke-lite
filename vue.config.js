@@ -38,8 +38,8 @@ module.exports = {
     },
     devServer: {
       disableHostCheck: true,
-      port: '9001',
-      open: 'http://localhost:9001/#/login',
+      port: '9201',
+      open: 'http://localhost:9201/#/login',
       proxy: {
         '/': {
           target: 'https://result.eolinker.com',

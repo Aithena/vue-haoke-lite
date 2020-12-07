@@ -40,15 +40,14 @@ export default {
         }
       ]
     }
-  },
-  methods: {}
+  }
 }
 </script>
 
 <style lang="less" scoped>
   .sidebar {
     position: relative;
-    height: .8rem;
+    height: 50px;
     .list {
       position: fixed;
       left: 0;
@@ -67,18 +66,18 @@ export default {
       text-align: center;
       color: #bbbbbb;
       line-height: 0;
-      padding: .1rem 0;
+      padding: 5px 0;
       &.router-link-active {
         color: #21b97a;
       }
       i {
-        line-height: .3rem;
-        font-size: .28rem;
+        line-height: 20px;
+        font-size: 18px;
       }
       span {
         display: block;
-        line-height: .3rem;
-        font-size: .2rem;
+        line-height: 20px;
+        font-size: 12px;
       }
     }
   }

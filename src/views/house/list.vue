@@ -86,12 +86,12 @@ export default {
     .link {
       position: relative;
       display: block;
-      padding: .3rem .2rem;
+      padding: 15px 10px;
       &::after {
         content: '';
         position: absolute;
-        left: .2rem;
-        right: .2rem;
+        left: 10px;
+        right: 10px;
         bottom: 0;
         border-top: 1px solid #eeeeee;
       }
@@ -100,27 +100,27 @@ export default {
       position: absolute;
       img {
         display: block;
-        width: 2rem;
-        height: 1.5rem;
+        width: 120px;
+        height: 90px;
       }
     }
     .exp {
       position: relative;
-      margin: 0 0 0 2.2rem;
+      margin: 0 0 0 130px;
     }
     .title {
       position: relative;
-      line-height: .3rem;
+      line-height: 20px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       color: #333333;
-      font-size: .26rem;
+      font-size: 16px;
     }
     .def {
       position: relative;
       color: #999999;
-      line-height: .4rem;
+      line-height: 25px;
       dd {
         display: inline-block;
         font-size: small;
@@ -134,13 +134,13 @@ export default {
     .tag {
       position: relative;
       line-height: 1;
-      margin: 0 0 .1rem;
+      margin: 0 0 5px;
       dd {
         display: inline-block;
-        line-height: .4rem;
+        line-height: 20px;
         margin: 0 .5em 0 0;
-        padding: 0 .1rem;
-        border-radius: .05rem;
+        padding: 0 5px;
+        border-radius: 3px;
         &:nth-child(1) {
           background: fade(#39becd, 20%);
           color: #39becd;

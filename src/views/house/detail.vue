@@ -44,7 +44,7 @@ export default {
 
 <style lang="less" scoped>
   .detial {
-    padding: .3rem;
+    padding: 10px;
     h1 {
       line-height: 1.5;
       margin: 0 0 1em;

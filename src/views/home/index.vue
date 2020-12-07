@@ -218,7 +218,6 @@ export default {
     }
     .list {
       position: relative;
-      padding: 5px;
       overflow: hidden;
     }
     .item {
@@ -228,23 +227,23 @@ export default {
       display: block;
       position: relative;
       background: #ffffff;
-      height: 70px;
-      margin: 5px;
       padding: 10px;
+      overflow: hidden;
       &:active {
         opacity: .8;
       }
       img {
         float: left;
         display: block;
-        width: 60px;
+        width: 80px;
         height: 60px;
       }
       .exp {
-        margin: 0 0 0 70px;
+        margin: 0 0 0 90px;
       }
       h3 {
-        line-height: 25px;
+        height: 40px;
+        line-height: 20px;
         color: #333333;
       }
       dd {

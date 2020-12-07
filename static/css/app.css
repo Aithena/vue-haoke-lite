@@ -1,8 +1,8 @@
-.sidebar[data-v-c39852fe] {
+.sidebar[data-v-7269b188] {
   position: relative;
-  height: 0.8rem;
+  height: 50px;
 }
-.sidebar .list[data-v-c39852fe] {
+.sidebar .list[data-v-7269b188] {
   position: fixed;
   left: 0;
   right: 0;
@@ -14,29 +14,29 @@
   background: #ffffff;
   border-top: 1px solid #eeeeee;
 }
-.sidebar .item[data-v-c39852fe] {
+.sidebar .item[data-v-7269b188] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-.sidebar .link[data-v-c39852fe] {
+.sidebar .link[data-v-7269b188] {
   display: block;
   text-align: center;
   color: #bbbbbb;
   line-height: 0;
-  padding: 0.1rem 0;
+  padding: 5px 0;
 }
-.sidebar .link.router-link-active[data-v-c39852fe] {
+.sidebar .link.router-link-active[data-v-7269b188] {
   color: #21b97a;
 }
-.sidebar .link i[data-v-c39852fe] {
-  line-height: 0.3rem;
-  font-size: 0.28rem;
+.sidebar .link i[data-v-7269b188] {
+  line-height: 20px;
+  font-size: 18px;
 }
-.sidebar .link span[data-v-c39852fe] {
+.sidebar .link span[data-v-7269b188] {
   display: block;
-  line-height: 0.3rem;
-  font-size: 0.2rem;
+  line-height: 20px;
+  font-size: 12px;
 }
 
 #app[data-v-4c2b2aae] {
@@ -146,7 +146,7 @@ a {
 .loader {
   position: relative;
   text-align: center;
-  line-height: 1rem;
+  line-height: 60px;
 }
 .loader span {
   color: #999999;

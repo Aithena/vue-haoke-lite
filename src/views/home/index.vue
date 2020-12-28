@@ -71,14 +71,20 @@
         </dd>
       </dl>
     </div>
+
+    <data-map></data-map>
   </div>
 </template>
 
 <script>
 import { getHomeData } from '@/api/home'
+import dataMap from './components/data-map/'
 
 export default {
   name: 'Home',
+  components: {
+    dataMap
+  },
   data () {
     return {
       advList: [],
